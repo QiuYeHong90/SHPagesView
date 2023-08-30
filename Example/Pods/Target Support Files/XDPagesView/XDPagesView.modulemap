@@ -1,0 +1,6 @@
+framework module XDPagesView {
+  umbrella header "XDPagesView-umbrella.h"
+
+  export *
+  module * { export * }
+}

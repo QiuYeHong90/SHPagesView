@@ -13,6 +13,12 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		71BE16ED2A9EDECC00E2808D /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE16EC2A9EDECC00E2808D /* TestTableViewCell.swift */; };
+		71BE16EF2A9EE09400E2808D /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE16EE2A9EE09400E2808D /* CustomHeader.swift */; };
+		71BE16F12A9EE09B00E2808D /* CustomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71BE16F02A9EE09B00E2808D /* CustomHeader.xib */; };
+		71D56F962A9DCBC7004669F8 /* xd_header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71D56F952A9DCBC7004669F8 /* xd_header.jpg */; };
+		71D56F982A9DD023004669F8 /* TestWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D56F972A9DD023004669F8 /* TestWViewController.swift */; };
+		71D56FA32A9DDBE3004669F8 /* ChildListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D56FA22A9DDBE3004669F8 /* ChildListViewController.swift */; };
 		9EB4B7F992523AFB88D711F8 /* Pods_SHPagesView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ECEEFCF062C6B06002BA6C5 /* Pods_SHPagesView_Example.framework */; };
 		A54274EB1A802A53605DAABE /* Pods_SHPagesView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB0F12F1FF3AB7447F5D6F2 /* Pods_SHPagesView_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -28,8 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0CF1E4B6F8EFFB92DD538F48 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		12A6220DF1E19112EBAD3873 /* SHPagesView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SHPagesView.podspec; path = ../SHPagesView.podspec; sourceTree = "<group>"; };
+		0CF1E4B6F8EFFB92DD538F48 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		12A6220DF1E19112EBAD3873 /* SHPagesView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SHPagesView.podspec; path = ../SHPagesView.podspec; sourceTree = "<group>"; };
 		162EA05CA771359C0E8EBDD9 /* Pods-SHPagesView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHPagesView_Tests.release.xcconfig"; path = "Target Support Files/Pods-SHPagesView_Tests/Pods-SHPagesView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2DB0F12F1FF3AB7447F5D6F2 /* Pods_SHPagesView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHPagesView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* SHPagesView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHPagesView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,11 +48,18 @@
 		607FACE51AFB9204008FA782 /* SHPagesView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHPagesView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		71BE16EC2A9EDECC00E2808D /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		71BE16EE2A9EE09400E2808D /* CustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
+		71BE16F02A9EE09B00E2808D /* CustomHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeader.xib; sourceTree = "<group>"; };
+		71D56F932A9DCAEC004669F8 /* VC_Style0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Style0.swift; sourceTree = "<group>"; };
+		71D56F952A9DCBC7004669F8 /* xd_header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xd_header.jpg; sourceTree = "<group>"; };
+		71D56F972A9DD023004669F8 /* TestWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWViewController.swift; sourceTree = "<group>"; };
+		71D56FA22A9DDBE3004669F8 /* ChildListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildListViewController.swift; sourceTree = "<group>"; };
 		86C90A4A5787262876177BDB /* Pods-SHPagesView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHPagesView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SHPagesView_Tests/Pods-SHPagesView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		91D661D25804CB47A38F4D33 /* Pods-SHPagesView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHPagesView_Example.debug.xcconfig"; path = "Target Support Files/Pods-SHPagesView_Example/Pods-SHPagesView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9ECEEFCF062C6B06002BA6C5 /* Pods_SHPagesView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHPagesView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65A1EC89499E7DE34DBD6ED /* Pods-SHPagesView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHPagesView_Example.release.xcconfig"; path = "Target Support Files/Pods-SHPagesView_Example/Pods-SHPagesView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		FC648B9BC3097123CE81DF64 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		FC648B9BC3097123CE81DF64 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +99,6 @@
 				86C90A4A5787262876177BDB /* Pods-SHPagesView_Tests.debug.xcconfig */,
 				162EA05CA771359C0E8EBDD9 /* Pods-SHPagesView_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -118,8 +130,15 @@
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				71D56F952A9DCBC7004669F8 /* xd_header.jpg */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				71D56F932A9DCAEC004669F8 /* VC_Style0.swift */,
+				71D56F972A9DD023004669F8 /* TestWViewController.swift */,
+				71D56FA22A9DDBE3004669F8 /* ChildListViewController.swift */,
+				71BE16EC2A9EDECC00E2808D /* TestTableViewCell.swift */,
+				71BE16EE2A9EE09400E2808D /* CustomHeader.swift */,
+				71BE16F02A9EE09B00E2808D /* CustomHeader.xib */,
 			);
 			name = "Example for SHPagesView";
 			path = SHPagesView;
@@ -227,6 +246,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -246,7 +266,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71D56F962A9DCBC7004669F8 /* xd_header.jpg in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				71BE16F12A9EE09B00E2808D /* CustomHeader.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -313,11 +335,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SHPagesView_Example/Pods-SHPagesView_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LookinServer/LookinServer.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SHPagesView/SHPagesView.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/XDPagesView/XDPagesView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SHPagesView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XDPagesView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -332,7 +362,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				71BE16EF2A9EE09400E2808D /* CustomHeader.swift in Sources */,
+				71D56F982A9DD023004669F8 /* TestWViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				71D56FA32A9DDBE3004669F8 /* ChildListViewController.swift in Sources */,
+				71BE16ED2A9EDECC00E2808D /* TestTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +458,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -469,6 +504,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -479,12 +515,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SHPagesView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -494,12 +531,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SHPagesView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -516,11 +554,12 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SHPagesView_Example.app/SHPagesView_Example";
 			};
 			name = Debug;
@@ -534,11 +573,12 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SHPagesView_Example.app/SHPagesView_Example";
 			};
 			name = Release;

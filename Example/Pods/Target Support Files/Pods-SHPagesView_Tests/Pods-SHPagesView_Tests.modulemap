@@ -1,0 +1,6 @@
+framework module Pods_SHPagesView_Tests {
+  umbrella header "Pods-SHPagesView_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
