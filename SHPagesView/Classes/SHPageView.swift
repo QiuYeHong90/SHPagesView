@@ -28,7 +28,7 @@ public class SHPageView: UIView {
     var topMaxY: CGFloat = 0
     
     
-    lazy var secitonBarView: SHSectionBar = {
+    public lazy var secitonBarView: SHSectionBar = {
         var view = SHSectionBar()
         view.didTapItemCall = {
             [weak self] index in
@@ -79,9 +79,14 @@ public class SHPageView: UIView {
         
     
     }
-    public func setHeader(header: UIView?) {
+    public func setHeader(header: UIView?, animation: Bool = false) {
         self.tableView.tableHeaderView = nil
         self.tableView.tableHeaderView = header
+        if animation {
+            UIView.animate(withDuration: 0.25) {
+                self.tableView.layoutIfNeeded()
+            }
+        }
         
     }
     

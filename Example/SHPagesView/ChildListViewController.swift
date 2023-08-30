@@ -66,7 +66,7 @@ class ChildListViewController: UIViewController, UITableViewDataSource,SHPageChi
         let cell = tableView.dequeueReusableCell(withIdentifier: "TestTableViewCell", for: indexPath) as! TestTableViewCell
         let item = self.dataArray[indexPath.row]
         cell.textLabel?.text = item
-        cell.backgroundColor = .brown
+//        cell.backgroundColor = .brown
         cell.tapCall = {
             [weak self] in
             let toVC = ChildListViewController.init()

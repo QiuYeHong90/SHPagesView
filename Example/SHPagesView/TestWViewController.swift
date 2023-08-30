@@ -21,6 +21,9 @@ class TestWViewController: UIViewController, SHPageViewDelegate {
         return self.childList
     }
     
+    var headerHeight: CGFloat = 200
+    
+    
     lazy var pageView: SHPageView = {
         var view = SHPageView()
         return view
@@ -29,15 +32,24 @@ class TestWViewController: UIViewController, SHPageViewDelegate {
         let view = CustomHeader.loadViewFromNib()
         view.tapCall = {
             [weak self] in
-            let toVC = ChildListViewController.init()
+            if self?.headerHeight == 200 {
+                self?.headerHeight = 300
+                self?.updateHeader(height: 300)
+            } else {
+                self?.headerHeight = 200
+                self?.updateHeader(height: 200)
+            }
             
-            self?.navigationController?.pushViewController(toVC, animated: true)
         }
         return view
     }()
     
     
-    
+    func updateHeader(height: CGFloat) {
+        pageView.setHeader(header: nil)
+        self.header.frame = CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: self.view.bounds.size.width, height: height))
+        pageView.setHeader(header: self.header, animation: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

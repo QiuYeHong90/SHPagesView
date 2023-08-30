@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SHSectionBar: UIView {
+public class SHSectionBar: UIView {
     var didTapItemCall: ((Int)->Void)?
     
     
@@ -24,6 +24,20 @@ class SHSectionBar: UIView {
         let coll = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: followLayout)
         return coll
     }()
+    
+    public lazy var markView: UIView = {
+        var view = UIView()
+        view.backgroundColor = UIColor(red: 0.1, green: 0.09, blue: 0.09, alpha: 1)
+        return view
+    }()
+    
+    public lazy var bottomLineView: UIView = {
+        var view = UIView()
+        view.backgroundColor = UIColor(red: 0.9, green: 0.89, blue: 0.89, alpha: 1)
+        return view
+    }()
+    
+    
     var dataArray: [String] = [] {
         didSet {
             reloadUI()
@@ -42,7 +56,9 @@ class SHSectionBar: UIView {
     }
     
     func initCommon() {
+        self.addSubview(bottomLineView)
         self.addSubview(collectionView)
+        collectionView.backgroundColor = .clear
         collectionView.snp.makeConstraints { make in
             make.left.top.right.bottom.equalTo(0)
         }
@@ -51,10 +67,17 @@ class SHSectionBar: UIView {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        self.collectionView.addSubview(markView)
         
+        
+        bottomLineView.snp.makeConstraints { make in
+            make.left.right.equalTo(0)
+            make.bottom.equalTo(0)
+            make.height.equalTo(1)
+        }
     }
 
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         reloadUI()
         
@@ -68,28 +91,51 @@ class SHSectionBar: UIView {
             followLayout.minimumLineSpacing = 0
             followLayout.minimumInteritemSpacing = 0
             followLayout.sectionInset = .zero
+            
+            markView.bounds = CGRect.init(x: 0, y: 0, width: itemW, height: 1)
+            
         }
+        self.markViewAnimate(index: self.selectIndex, animate: false)
         self.collectionView.reloadData()
     }
     
     func setSelcted(index: Int) {
         self.selectIndex = index
+        self.markViewAnimate(index: index, animate: true)
         self.collectionView.reloadData()
+        
     }
     
     func scrollTo(index: Int, animated: Bool = true) {
         self.selectIndex = index
-        self.collectionView.reloadData()
+        
 //        self.collectionView.scrollToItem(at: IndexPath.init(row: index, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: animated)
+        self.markViewAnimate(index: index, animate: animated)
+        self.collectionView.reloadData()
+    }
+    
+    func markViewAnimate(index: Int,animate: Bool = false) {
+        if let cell = self.collectionView.cellForItem(at: IndexPath.init(row: index, section: 0)) {
+            let rect = CGRect.init(x: cell.frame.origin.x, y: cell.frame.maxY - 1, width: cell.frame.size.width, height: 1)
+            if animate {
+                UIView.animate(withDuration: 0.25) {
+                    self.markView.frame = rect
+                }
+            } else {
+                markView.frame = rect
+            }
+        }
+        
+        
     }
 }
 
 extension SHSectionBar: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataArray.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SHSectionBarItemCell", for: indexPath) as! SHSectionBarItemCell
         cell.tapCall = {
             [weak self] in
