@@ -7,7 +7,8 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+分页控制器 支持header 和 TitleBar 悬浮
+具体细节请参考demo 代码
 
 ## Requirements
 
