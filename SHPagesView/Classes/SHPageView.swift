@@ -203,7 +203,6 @@ public class SHPageView: UIView {
 //            向上
             print("scrollView11 向上== \(scrollView.contentOffset)")
             
-            
         } else {
 //            向下
             print("scrollView11 向下== \(scrollView.contentOffset) headerHeight = \(headerHeight)")
@@ -223,6 +222,7 @@ public class SHPageView: UIView {
 //                    scrollView.contentOffset = CGPointMake(0, topMaxY);
 //
 //                }
+                self.pageCell?.scrollView.isScrollEnabled = true
                 scrollView.contentOffset = CGPointMake(0, topMaxY);
                 
             }
@@ -233,7 +233,13 @@ public class SHPageView: UIView {
     }
     
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
+        self.pageCell?.scrollView.isScrollEnabled = true
+    }
+    
+    
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        print("scrollViewDidEndDragging")
+        self.pageCell?.scrollView.isScrollEnabled = true
     }
 }
 extension SHPageView: UITableViewDataSource {

@@ -11,7 +11,6 @@ import UIKit
 open class SHPageCell: UITableViewCell, UIScrollViewDelegate {
     weak var mainView: SHPageView?
     var isLock: Bool = false
-    
     var scrollEndCall: ((Int)->Void)?
     var observVCs: [SHPageChildUIViewContoller] = []
     var observScrollViews: [UIScrollView] = []
@@ -148,6 +147,7 @@ open class SHPageCell: UITableViewCell, UIScrollViewDelegate {
                 isLock = false
             }
             
+            self.scrollView.isScrollEnabled = false
             if isMainLock {
 //                向上滑动到极限了
                 return
