@@ -17,7 +17,7 @@ SHPagesView is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SHPagesView'
+pod 'SHPagesView', :git => 'https://github.com/QiuYeHong90/SHPagesView.git'
 ```
 
 ## Author
